@@ -50,8 +50,7 @@ $(document).ready(function(){
 
 
 
-    var cartItems = [];
-    var shopifyLink = "http://nihil-artikel.myshopify.com/cart/";
+
 
     $(".down,.arrow").click(function(){
       var one = $(".desc").offset();
@@ -76,6 +75,8 @@ $(document).ready(function(){
       $(".cartpage").toggleClass("out");
     });
 
+    var price = 39;
+
     $(".buyone").click(function(){
 
         $(".cartcount").html(function(i, val) { 
@@ -83,10 +84,10 @@ $(document).ready(function(){
         });
 
         $(".totalnumber > p").html(function(i, val) {
-          return val*1+40 
+          return val*1+price
         });
 
-        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Copper</p><p class='price'>$40</p><p class='removeone'>Remove</p></div>");
+        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Copper</p><p class='price'>$39</p><p class='removeone'>Remove</p></div>");
           //add variant to array//
           cartItems.push('35068487235:1');
 
@@ -99,10 +100,10 @@ $(document).ready(function(){
           return val*1+1 });
 
         $(".totalnumber > p").html(function(i, val) {
-          return val*1+40 
+          return val*1+price
           });
 
-        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Brass</p><p class='price'>$40</p><p class='removetwo'>Remove</p></div>");
+        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Brass</p><p class='price'>$39</p><p class='removetwo'>Remove</p></div>");
           //add variant to array//
           cartItems.push('35068360067:1');
 
@@ -116,10 +117,10 @@ $(document).ready(function(){
           });
 
         $(".totalnumber > p").html(function(i, val) {
-          return val*1+40 
+          return val*1+price
           });
 
-        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Stainless</p><p class='price'>$40</p><p class='removethree'>Remove</p></div>");
+        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Stainless</p><p class='price'>$39</p><p class='removethree'>Remove</p></div>");
           //add variant to array//
           cartItems.push('35068492547:1');
 
@@ -142,7 +143,7 @@ $(document).ready(function(){
         });
         //subtract 40 from total//
         $(".totalnumber > p").html(function(i, val) {
-          return val*1-40 
+          return val*1-price 
         });
 
         var search_term = '35068487235:1';
@@ -168,7 +169,7 @@ $(document).ready(function(){
         });
         //subtract 40 from total//
         $(".totalnumber > p").html(function(i, val) {
-          return val*1-40 
+          return val*1-price 
         });
 
         var search_term = '35068360067:1';
@@ -195,7 +196,7 @@ $(document).ready(function(){
         });
         //subtract 40 from total//
         $(".totalnumber > p").html(function(i, val) {
-          return val*1-40 
+          return val*1-price 
         });
 
         var search_term = '35068492547:1';
@@ -220,6 +221,9 @@ $(document).ready(function(){
         }
 
     });
+
+    var cartItems = [];
+    var shopifyLink = "http://nihil-artikel.myshopify.com/cart/";
 
     // generate final permalink //
 
