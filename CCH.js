@@ -452,13 +452,13 @@ $(document).ready(function(){
     });
 
     // refresh on smaller size, just in case //
-    $(window).resize(function(){
-          if ($(window).width() <= 767) {   
-                  location.reload(); 
-        } else {
+    // $(window).resize(function(){
+    //       if ($(window).width() <= 767) {   
+    //               location.reload(); 
+    //     } else {
 
-        }
-    });
+    //     }
+    // });
   
 
     var cartItems = [];
