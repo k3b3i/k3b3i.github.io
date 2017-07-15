@@ -27,7 +27,7 @@
         <div class="test">
             <img class="pimage" src="images/copper.gif">
               <h1 class="material">Copper</h1>
-                <p class="info">CNC machined from solid pure copper, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $40.</p>
+                <p class="info">CNC machined from solid pure copper, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $39.</p>
                 <p class="details">Weight<br>Dimension</p>
                 <p class="dim">105g<br>24 cubic mm</p>
             <a class="buyone">Add to cart</a> 
@@ -35,7 +35,7 @@
         <div class="test">
             <img class="pimage" src="images/brass.gif">
               <h1 class="material">Brass</h1>
-                <p class="info">CNC machined from solid pure brass, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $40.</p>
+                <p class="info">CNC machined from solid pure brass, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $39.</p>
                 <p class="details">Weight<br>Dimension</p>
                 <p class="dim">105g<br>24 cubic mm</p>
             <a class="buytwo">Add to cart</a>
@@ -43,7 +43,7 @@
         <div class="test">
             <img class="pimage" src="images/steel.gif">
               <h1 class="material">Stainless</h1>
-                <p class="info">CNC machined from solid pure stainless steel, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $40.</p>
+                <p class="info">CNC machined from solid pure stainless steel, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $39.</p>
                 <p class="details">Weight<br>Dimension</p>
                 <p class="dim">105g<br>24 cubic mm</p>
             <a class="buythree">Add to cart</a>
@@ -60,10 +60,45 @@
     <!-- Cart page -->
 
     <div class="cartpage">
+      <div style="display:none" class="cartcontent">
+            <div style="display:none" id="item" class='cartitemcopper'>
+                <p class='producttitle'>Copper</p>
+                <div id='myform'>
+                    <p class='qtyminusc'>-</p>
+                    <p class="qtyc">0</p>
+                    <p class='qtyplusc'>+</p>
+                </div>
+                <div class='pricec'>$<p class="thispricec">0</p></div>
+                <img id="remove" class="removeone" src="remove.svg">
+            </div>
+            <div style="display:none" id="item" class='cartitembrass'>
+                <p class='producttitle'>Brass</p>
+                <div id='myform'>
+                    <p class='qtyminusb'>-</p>
+                    <p class="qtyb">0</p>
+                    <p class='qtyplusb'>+</p>
+                </div>
+                <div class='priceb'>$<p class="thispriceb">0</p></div>
+                <img id="remove" class="removetwo" src="remove.svg">
+            </div>
+            <div style="display:none" id="item" class='cartitemstainless'>
+                <p class='producttitle'>Stainless</p>
+                <div id='myform'>
+                    <p class='qtyminuss'>-</p>
+                    <p class="qtys">0</p>
+                    <p class='qtypluss'>+</p>
+                </div>
+                <div class='prices'>$<p class="thisprices">0</p></div>
+                <img id="remove" class="removethree" src="remove.svg">
+            </div>
+            <div class="cartitem">
+            <p class="total"> Total:</p> 
+            <div class="totalnumber"> $<p>39</p></div>
+            </div>
+      </div>
       <img class="close" src="close.svg">
-      <p class="empty"> Cart is currently empty.</p>
-      <p class="total"> Total:</p> 
-      <div class="totalnumber"> $<p>0</p>.00</div>
+      <p class="empty"> Cart is Currently Empty.</p>
+      <p style="display:none" class="shipping">*Free domestic shipping for all orders over $100</p>
       <p class="checkout">Checkout</p>
     </div>
 
