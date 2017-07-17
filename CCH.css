@@ -711,6 +711,10 @@ a {
                     height: 450px;
                   }
 
+                  .test:last-child {
+                    margin-bottom: 150px !important;
+                  }
+
                   .bigimage,.test {
                     margin-bottom: 50px;
                   }
@@ -718,6 +722,7 @@ a {
                   .smallcontain {
                     margin-top: 45% !important;
                   }
+
 
     @media screen and (max-width: 350px){
                   
