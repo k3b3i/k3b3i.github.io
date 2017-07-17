@@ -366,13 +366,13 @@ html {
   position: absolute;
   display: inline;
   top: 20px;
-  left: 2%;
+  left: 2.25%;
   font-size: 25;
  }
 
  .producttitle {
   position: absolute;
-  left: 2%;
+  left: 2.25%;
   top: 20px;
   margin-top: 0;
 }
