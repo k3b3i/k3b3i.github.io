@@ -24,16 +24,18 @@ $(document).ready(function(){
         gallery.append(images);
 
         
+      
+        $(gallery).appendTo(body).insertBefore(".contain");
+
         if($(window).width() < 767) {
           
-          $(info).appendTo(body).insertAfter(".phonesplash");
+          $(info).appendTo(body).insertBefore(gallery);
 
         } else {
 
-          $(info).appendTo(body).insertAfter(".splash");
+          $(info).appendTo(body).insertBefore(gallery);
 
         }
-        $(gallery).appendTo(body).insertBefore(".contain");
 
         $(".imagegallery > section > img").addClass("bigimage");
 
@@ -48,37 +50,84 @@ $(document).ready(function(){
     });
   }, "MC5XV1pSRUNZQUFDa0EzSkow.X--_vRwYOu-_vU3vv70_Ne-_vSvvv70TSO-_vTnvv73vv73vv73vv71DW--_ve-_ve-_vTIzU--_ve-_vUg");
 
+    
+    $("#c,#b,#s").hide();
+    $("#c").first().show();
+    $("#b").first().show();
+    $("#s").first().show();
+    var clicked = 0;
+    
+    $("#c,#b,#s").click(function () {
+      clicked++;
+      console.log(clicked);
+
+      $(this).hide();
+      $(this).next().show();
+
+      if ($("#c:visible").length === 0){
+        $(this).hide();
+        $(this).first().show();
+      }
+      if ($("#b:visible").length === 0){
+        $(this).hide();
+        $(this).first().show();
+      }
+      if ($("#s:visible").length === 0){
+        $(this).hide();
+        $(this).first().show();
+      }
+        
+    });
+
+    // $(".pimage").mousemove(function(){
+    //   $(".right").show().css({"z-index":"999","left":event.pageX,"top":event.pageY});
+    // });
+
+    // $(".pimage").mouseover(function(){
+    //   $(".right").show();
+    // }).mouseleave(function(){
+    //   $(".right").hide();
+    // });
+
 
 
 
 
     $(".down").click(function(){
       var one = $(".desc").offset();
-      var two = $(".desc").height()*.5;
+      var two = $(window).height()*.35;
       $(".arrow").fadeOut();
         $("body,html").animate({scrollTop: one.top-two},700);
     });
+
+
+
+
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
       $(".purchase").click(function(){
       var one = $(".contain").offset();
-        $("body,html").animate({scrollTop: one.top+100},700);
+        $("body,html").animate({scrollTop: one.top-100},700);
     });
 
     } else {
 
       $(".purchase").click(function(){
       var one = $(".contain").offset();
-      var two = $(window).height()*.15;
-        $("body,html").animate({scrollTop: one.top-two},700);
+      var two = $(window).height()*.25;
+        $("body,html").animate({scrollTop: one.top},700);
     });
 
     }
 
+
+
+
+
     $(".gallery").click(function(){
       var one = $(".imagegallery").offset();
-        $("body,html").animate({scrollTop: one.top-100},700);
+        $("body,html").animate({scrollTop: one.top-120},700);
     });
 
     $(".cart").click(function(){

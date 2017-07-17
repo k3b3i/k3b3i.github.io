@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="CCH.css" media="none" onload="this.media='all';">
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="https://unpkg.com/prismic.io/dist/prismic.io.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
   <script src="CCH.js"></script>
 </head>
 
@@ -24,29 +25,60 @@
     <!-- Purchase section -->
 
     <div class="contain">
+
         <div class="test">
-            <img class="pimage" src="images/copper.gif">
-              <h1 class="material">Copper</h1>
+                <figure id="c" class="pimage">
+                <img  id="stay" class="pimage" src="images/cu1.jpg" class="first">
+                </figure>
+                <figure id="c" class="pimage">
+                <img   id="stay" class="pimage" src="images/cu2.jpg">
+                </figure>
+                <figure id="c" class="pimage">
+                  <img  id="stay" class="pimage"  src="images/cu3.jpg">
+                  <figcaption>* Sample with 1 year of use</figcaption>
+                </figure>
+                    
+                <h1 class="material">Copper</h1>
                 <p class="info">CNC machined from solid pure copper, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $39.</p>
-                <p class="details">Weight<br>Dimension</p>
-                <p class="dim">105g<br>24 cubic mm</p>
-            <a class="buyone">Add to cart</a> 
+                <div class="smallcontain">
+                      <p class="details">Weight<br>Dimension</p>
+                      <p class="dim">105g<br>24 cubic mm</p>
+                      <a class="buyone">$39</a> 
+                </div>
         </div>
         <div class="test">
-            <img class="pimage" src="images/brass.gif">
+            
+              <figure id="b" class="pimage">
+                <img  id="stay" class="pimage" src="images/br1.jpg" class="first">
+                </figure>
+                <figure id="b" class="pimage">
+                <img  id="stay" class="pimage" src="images/br2.jpg">
+                </figure>
+                <figure id="b" class="pimage">
+                  <img  id="stay" class="pimage"  src="images/br3.jpg">
+                  <figcaption>* Sample with 1 year of use</figcaption>
+                </figure>
+            
               <h1 class="material">Brass</h1>
                 <p class="info">CNC machined from solid pure brass, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $39.</p>
-                <p class="details">Weight<br>Dimension</p>
-                <p class="dim">105g<br>24 cubic mm</p>
-            <a class="buytwo">Add to cart</a>
+                <div class="smallcontain">
+                      <p class="details">Weight<br>Dimension</p>
+                      <p class="dim">105g<br>24 cubic mm</p>
+                      <a class="buytwo">$39</a>
+                </div>
         </div>
         <div class="test">
-            <img class="pimage" src="images/steel.gif">
+            
+              <img  id="s"class="pimage" src="images/ss1.jpg">
+              <img  id="s" class="pimage" src="images/ss2.jpg">
+            
               <h1 class="material">Stainless</h1>
                 <p class="info">CNC machined from solid pure stainless steel, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $39.</p>
-                <p class="details">Weight<br>Dimension</p>
-                <p class="dim">105g<br>24 cubic mm</p>
-            <a class="buythree">Add to cart</a>
+                <div class="smallcontain">
+                      <p class="details">Weight<br>Dimension</p>
+                      <p class="dim">105g<br>24 cubic mm</p>
+                      <a class="buythree">$39</a>
+                </div>
         </div>
     </div>
 
@@ -64,9 +96,9 @@
             <div style="display:none" id="item" class='cartitemcopper'>
                 <p class='producttitle'>Copper</p>
                 <div id='myform'>
-                    <p class='qtyminusc'>-</p>
-                    <p class="qtyc">0</p>
-                    <p class='qtyplusc'>+</p>
+                    <p id="q" class='qtyminusc'>-</p>
+                    <p id="q"class="qtyc">0</p>
+                    <p id="q" class='qtyplusc'>+</p>
                 </div>
                 <div class='pricec'>$<p class="thispricec">0</p></div>
                 <img id="remove" class="removeone" src="remove.svg">
@@ -74,9 +106,9 @@
             <div style="display:none" id="item" class='cartitembrass'>
                 <p class='producttitle'>Brass</p>
                 <div id='myform'>
-                    <p class='qtyminusb'>-</p>
-                    <p class="qtyb">0</p>
-                    <p class='qtyplusb'>+</p>
+                    <p id="q" class='qtyminusb'>-</p>
+                    <p id="q" class="qtyb">0</p>
+                    <p id="q" class='qtyplusb'>+</p>
                 </div>
                 <div class='priceb'>$<p class="thispriceb">0</p></div>
                 <img id="remove" class="removetwo" src="remove.svg">
@@ -84,9 +116,9 @@
             <div style="display:none" id="item" class='cartitemstainless'>
                 <p class='producttitle'>Stainless</p>
                 <div id='myform'>
-                    <p class='qtyminuss'>-</p>
-                    <p class="qtys">0</p>
-                    <p class='qtypluss'>+</p>
+                    <p id="q" class='qtyminuss'>-</p>
+                    <p id="q" class="qtys">0</p>
+                    <p id="q" class='qtypluss'>+</p>
                 </div>
                 <div class='prices'>$<p class="thisprices">0</p></div>
                 <img id="remove" class="removethree" src="remove.svg">

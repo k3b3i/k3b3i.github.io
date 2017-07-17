@@ -1,5 +1,5 @@
-::-moz-selection { background-color: black; color: #bfbfbf ; }
-::selection { background-color: black; color: #bfbfbf ; }
+::-moz-selection { background-color: transparent; color: #bfbfbf ; }
+::selection { background-color: transparent; color: #bfbfbf ; }
 
 ::-webkit-scrollbar { 
     display: none; 
@@ -42,6 +42,23 @@ html {
   margin: 0;
  }
 
+ figcaption {
+  display: inline;
+  position: relative;
+  top: 105%;
+  width: 100%;
+  color:#bfbfbf;
+  font-size: 15;
+ }
+
+ .right {
+  cursor: none;
+  z-index: 999 !important;
+  position: relative;
+  width: 26px !important;
+  height: 26px !important;
+ }
+
  .cart {
   display: inline;
   position: fixed;
@@ -53,7 +70,8 @@ html {
  }
 
  .cart:hover,.purchase:hover,.gallery:hover,.down:hover{
-  text-decoration: underline;
+  margin-bottom: -1px;
+  border-bottom: 1px solid #bfbfbf;
  }
 
  .cartcount {
@@ -87,17 +105,20 @@ html {
  }
 
 .buyone,.buytwo,.buythree{
+  margin: 0;
   font-size: 20;
   border-radius: 2px;
   cursor: pointer;
   text-align: center;
   position: absolute;
-  bottom: 80;
-  left: 0%;
-  width: 100%;
+  bottom: 0;
+  right: 0;
+  padding: .75%;
+  padding-right: 7.5%;
+  padding-left: 7.5%;
+  width: auto;
   color: #bfbfbf;
   text-decoration: none;
-  padding: .5%;
   border: 1px solid #bfbfbf;
 }
 
@@ -106,70 +127,87 @@ html {
   color: black;
 }
 
- .material {
+.smallcontain {
+  z-index: 999;
   position: relative;
-  font-size: 20;
+  left: 50%;
   width: 50%;
-  left: 0%;
-  top: 0;
+  height: 20%;
+  margin-top: 5%;
   float: top;
+}
+
+ .material {
+  position: absolute;
+  font-size: 20;
+  width: auto;
+  left: 50%;
+  top: 0;
+  margin-top: 0;
  }
 
  .info {
-  width: 100%;
+  margin-top: 8%;
+  width: 50%;
   position: relative;
-  left: 0%;
+  left: 50%;
   float: top;
   font-size: 20;
  }
 
  .details {
+  margin-top: 0;
   font-size: 20;
   left: 0%;
   position: absolute;
-  bottom: 100;
+  top: 0;
   text-align: justify;
   line-height: 1.4;
  }
 
  .dim {
+  margin-top: 0;
   font-size: 20;
   position: absolute;
-  bottom: 100;
+  top:0;
   right: 0;
   line-height: 1.4;
   text-align: right;
  }
 
  .pimage{
-  position: relative;
+  margin:0;
+  cursor: none;
+  position: absolute;
   top: 0;
-  margin: -1%;
-  left: -10px;
-  width: 90px;
-  height: 90px;
+  left: 0;
+  width: auto;
+  height: 100% !important;
+  cursor: url(right.png), auto;
+
  }
 
  .test {
-  background-color: none;
   top: 0%;
   position: relative;
   float: left;
-  width: 31%;
+  width: 100%;
   top: 50%;
-  height: 500px;
+  height: auto;
   margin-right: 2%;
   margin-left: 0%;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   font-size: 20;
   transform:translate(0%,-50%);
   -webkit-transform:translate(0%,-50%);
  }
 
  .splash {
-  left: 50%;
+  margin: 0;
+  margin-left: 0;
+  left: 46%;
   top: 0%;
-  width: 50%;
+  width: 700px;
   height: 71%;
   padding-top: 9%;
   padding-bottom: 20%;
@@ -182,8 +220,7 @@ html {
 .desc {
   position: relative;
   float: top;
-  min-width: 30%;
-  width: 50%;
+  width: 700px;
   font-size: 25;
   left: 50%;
   margin-bottom: 25%;
@@ -195,7 +232,7 @@ html {
   position: relative;
   float: top;
   left: 50%;
-  width: 50%;
+  width: 700px;
   margin-top: 20%;
   margin-bottom: 30%;
   transform:translate(-50%,0%);
@@ -209,7 +246,7 @@ html {
   left: 50%;
   height: auto;
   width: 100% !important;
-  margin-bottom: 6%;
+  margin-bottom: 100px;
   height: auto;
   transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
@@ -219,10 +256,14 @@ html {
 .contain {
   position: relative;
   float: top;
-  width: 50%;
-  left: 51%;
+  width: 700px;
+  left: 50%;
   margin-bottom: 4%;
   height: 80%;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
 }
@@ -264,21 +305,28 @@ html {
 }
 
 #myform {
-  background-color: transparent;
   position: absolute;
-  right: 53%;
+  right: 50%;
   margin-top: 0;
   top: 20px;
-  width: auto;
+  width: 20% !important;
   display: inline;
   text-align: center
 }
 
 #myform > p {
+  position: relative;
   display: inline;
-  width: 40px;
   cursor: pointer;
+  width: 10%;
+  margin-right: 15%;
 }
+
+/*#q {
+  position: relative;
+  background-color: red;
+  width: 10%;
+ }*/
 
 .cartcontent {
   border-top: 1px solid #bfbfbf;
@@ -380,12 +428,12 @@ a {
   margin: none;
   right: 3%;
   position: absolute;
-  top: 18px;
+  top: 21px;
   z-index: 999;
   cursor: pointer;
   margin-top: 0;
-  width: 28px !important;
-  height: 28px !important;
+  width: 22px !important;
+  height: 22px !important;
 }
 
 .empty {
@@ -398,8 +446,8 @@ a {
 }
 
 .close {
-  width: 28px !important;
-  height: 28px !important;
+  width: 22px !important;
+  height: 22px !important;
   position: absolute;
   margin: 0;
   top: 2.5%;
@@ -409,79 +457,122 @@ a {
 }
 
 .phonesplash {
-  position: absolute;
-  display:none;
-  width: 90%;
-  height: auto;
-  left: 50%;
-  top: 50%;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
+  display: none;
+  left: 50% !important;
+  top: 0;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
+}
+
+
+
+
+@media screen and (max-width: 1110px) {
+  .desc,.splash,.imagegallery,.contain {
+    width: 475px;
+  }
+
+  .imagegallery {
+    margin-bottom: 600px;
+  }
+  .test {
+    height: 800px;
+    margin-bottom: 100px;
+  }
+  .pimage {
+    position: absolute;
+    float: top;
+    margin: 0;
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 6%;
+  }
+
+  #stay {
+    position: absolute;
+  }
+
+  .material {
+    position: absolute;
+    top: 62%;
+  }
+
+  .info {
+    position:absolute;
+    top: 64%;
+    float: right;
+    margin-top: 10% !important;
+    margin-bottom: 8%;
+
+  }
+  .material,.info,.dim,.details {
+    margin: 0;
+    display: inline;
+    left: 0;
+    width: 100%;
+  }
+
+  .smallcontain {
+    position: absolute;
+    bottom: 0;
+    margin-top: 30%;
+    width: 100%;
+    left: 0;
+    height: 15%;
+  }
+
+  .buyone,.buytwo,.buythree {
+    width: 99.5%;
+    padding-right: 0%;
+  padding-left: 0%;
+  }
+
+  figcaption {
+    display: none;
+  }
 
 }
 
-/* Small windows and mobile */
-
-    @media screen and (max-width: 1300px){
-
-            .phonesplash,.contain,.imagegallery,.desc {
-              width: 50% !important;
-            }
-
-            .test {
-              width: 100%;
-              font-size: 25;
-              height: 420px;
-            }
-
-            .close {
-              width: 20px;
-              height: 20px;
-            }
-
-
-
-
-      }
-
-    @media screen and (max-width: 736px){
+   @media screen and (max-width: 750px){
 
                   html, body {
                     font-size: 16 !important;
                   }
 
                   .gallery {
-                    bottom: 5.75% !important;
+                    bottom: 5.5% !important;
+                  }
+
+                  .desc,.phonesplash,.imagegallery,.contain {
+                    width: 250px;
                   }
 
                   .price {
                   top: 0px;
                 }
 
-                  .phonesplash,.contain,.imagegallery,.desc {
-                  width: 60% !important;
+                .dim,.details {
+                  position: absolute;
+                  top: 30 !important;
                 }
 
+                .phonesplash {
+                  margin: 0;
+                  margin-left: 0;
+                  position: relative;
+                  display: inline-block;
+                  margin-top: 50%;
+                  margin-bottom: 60%;
+                }
 
-                  .phonesplash {
-                    position:relative;
-                    display: inline;
-                    width: 80%;
-                    left: 50%;
-                    top: 100%;
-                    margin-top: 40%;
-                    margin-bottom: 70%;
-                    transform:translate(-50%,0%);
-                    -webkit-transform:translate(-50%,0%);
-
-                  }
+  
                   .splash {
                     display: none;
                   }
 
                   .desc {
                     text-align: center;
-                    width: 80%;
+                    
                     left: 50%;
                     margin-bottom: 60%;
                     transform:translate(-50%,0%);
@@ -492,18 +583,27 @@ a {
                     font-size: 16;
                   }
 
+                  .material {
+                    top: 53%;
+                  }
+
+                  .info {
+                    top: 56% !important;
+                  }
+
                   .contain {
-                    width: 80%;
+                    left: 50%;
+                    transform:translate(-50%,0%);
+                    -webkit-transform:translate(-50%,0%);
                   }
 
                   .test {
                     font-size: 16;
                     width: 100%;
-                    left: 50%;
-                    height: 410px !important;
+                    left: 0%;
+                    height: 500px;
                     float: top;
-                    transform:translate(-50%,0%);
-                    -webkit-transform:translate(-50%,0%);
+                    margin-bottom: 60px;
                   }
 
                   .bigimage > img {
@@ -524,7 +624,7 @@ a {
                   }
 
                   #remove {
-                    top: 13px !important;
+                    top: 17px !important;
                   }
 
                   .desc,.dim,.details,.empty,.close,.checkout,.total,
@@ -548,8 +648,10 @@ a {
                   }
 
                   .imagegallery {
-                    width: 80%;
-                    margin-bottom: 0%;
+                    margin-bottom: 300px;
+                    left: 50%;
+                    transform:translate(-50%,0%);
+                    -webkit-transform:translate(-50%,0%);
                   }
 
                   .gallery{
@@ -566,15 +668,65 @@ a {
                   }
 
 
+                  .smallcontain {
+                    margin-top: 40% !important;
+                    height: 110px;
+                  }
+
+}
 
     @media screen and (max-width: 568px){
                   
                   body {
                     font-size: 14;
                   }
-                  .test {
-                    height: 33%;
+
+    }
+
+    @media screen and (max-width: 508px){
+                  
+                  .smallcontain {
+                    margin-top: 40% !important;
                   }
+
+                 
+  
+
+    }
+
+    @media screen and (max-width: 488px){
+                  .desc,.phonesplash,.imagegallery,.contain {
+                    width: 200px;
+                  }
+
+                  .material {
+                    top: 48%;
+                  }
+
+                  .info {
+                    top:51% !important;
+                  }
+
+                  .test {
+                    height: 450px;
+                  }
+
+                  .bigimage,.test {
+                    margin-bottom: 50px;
+                  }
+                  
+                  .smallcontain {
+                    margin-top: 45% !important;
+                  }
+
+    @media screen and (max-width: 350px){
+                  
+                  .smallcontain {
+                    margin-top: 70% !important;
+                  }
+
+                 
+  
 
     }
 
