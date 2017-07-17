@@ -460,8 +460,8 @@ a {
   display: none;
   left: 50% !important;
   top: 0;
-  transform:translate(-50%,0%);
-  -webkit-transform:translate(-50%,0%);
+  transform:translate(-50%,-10%);
+  -webkit-transform:translate(-50%,-10%);
 }
 
 
