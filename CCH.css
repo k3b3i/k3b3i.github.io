@@ -64,7 +64,7 @@ html {
   position: fixed;
   cursor: pointer;
   top: 2.5%;
-  right: 2%;
+  right: 1.75%;
   font-size: 25;
   z-index: 999;
  }
@@ -81,7 +81,7 @@ html {
  .down {
   cursor: pointer;
   position: fixed;
-  left: 2%;
+  left: 1.75%;
   top: 2.5%;
   font-size: 25;
   transform:translate(0%,0%);
@@ -91,7 +91,7 @@ html {
  .purchase{
   cursor: pointer;
   position: fixed;
-  left: 2%;
+  left: 1.75%;
   bottom: 2.5%;
   font-size: 25;
  }
@@ -99,7 +99,7 @@ html {
   .gallery{
   cursor: pointer;
   position: fixed;
-  left: 2%;
+  left: 1.75%;
   bottom: 6.5%;
   font-size: 25;
  }
@@ -349,7 +349,7 @@ html {
   color: #bfbfbf;
   bottom: 2.5%;
   margin-bottom: 0;
-  right: 3.5%;
+  right: 3%;
   padding: .75%;
   border: 1px solid #bfbfbf;
   width: auto;
@@ -451,7 +451,7 @@ a {
   position: absolute;
   margin: 0;
   top: 2.5%;
-  left: 2%;
+  left: 2.25%;
   font-size: 25;
   cursor: pointer;
 }
