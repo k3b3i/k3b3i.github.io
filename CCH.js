@@ -79,17 +79,6 @@ $(document).ready(function(){
         
     });
 
-    // $(".pimage").mousemove(function(){
-    //   $(".right").show().css({"z-index":"999","left":event.pageX,"top":event.pageY});
-    // });
-
-    // $(".pimage").mouseover(function(){
-    //   $(".right").show();
-    // }).mouseleave(function(){
-    //   $(".right").hide();
-    // });
-
-
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
