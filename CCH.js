@@ -84,9 +84,9 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
     $(".down").click(function(){
       var one = $(".desc").offset();
-      var two = $(window).height()*.25;
+      var two = $(window).height()*.5;
       $(".arrow").fadeOut();
-        $("body,html").animate({scrollTop: one.top-two},700);
+        $("body,html").animate({scrollTop: one.top-150},700);
     });
 
 } else {
@@ -107,7 +107,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
       $(".purchase").click(function(){
       var one = $(".contain").offset();
-        $("body,html").animate({scrollTop: one.top},700);
+        $("body,html").animate({scrollTop: one.top-150},700);
     });
 
     } else {
