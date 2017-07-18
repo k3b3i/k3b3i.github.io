@@ -203,6 +203,10 @@ html {
   -webkit-transform:translate(0%,0%);
  }
 
+ .test:last-child {
+  margin-bottom: 150px !important;
+ }
+
  .splash {
   margin: 0;
   margin-left: 0;
@@ -260,6 +264,7 @@ html {
   width: 700px;
   left: 50%;
   height: 80%;
+  margin-bottom: 150px !important;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
