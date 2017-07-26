@@ -1,16 +1,16 @@
 ::-moz-selection { background-color: transparent; color: #bfbfbf ; }
 ::selection { background-color: transparent; color: #bfbfbf ; }
 
-::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+    display: none;
 }
 
-::-moz-scrollbar { 
-    display: none; 
+::-moz-scrollbar {
+    display: none;
 }
 
-::-scrollbar { 
-    display: none; 
+::-scrollbar {
+    display: none;
 }
 
 @font-face {
@@ -50,7 +50,7 @@ html {
   top: 105%;
   width: 100%;
   color:#bfbfbf;
-  font-size: 15;
+  font-size: 17;
  }
 
  .right {
@@ -126,6 +126,12 @@ html {
 .buyone:hover,.buytwo:hover,.buythree:hover {
   background-color: #bfbfbf;
   color: black !important;
+}
+
+.buyone:active,.buytwo:active,.buythree:active {
+  background-color: white;
+  color: black;
+  bottom: -1px;
 }
 
 .smallcontain {
@@ -309,9 +315,9 @@ html {
 
 .shipping {
   position: absolute;
-  bottom: 2%;
+  bottom: 0% !important;
   left: 2.25%;
-  font-size: 15;
+  font-size: 17;
   color: #bfbfbf;
 }
 
@@ -371,6 +377,13 @@ html {
 .checkout:hover {
   color: black;
   background-color: #bfbfbf;
+}
+
+.checkout:active {
+  background-color: white;
+  color: black;
+  bottom: 2.25%;
+
 }
 
  .total{
@@ -484,10 +497,40 @@ a {
   left: 0;
 }
 
+.thirtynine {
+  position: absolute;
+  z-index: 999;
+  top: 59.5% !important;
+  left: 0;
+}
+
+.downarrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: 3vh !important;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
+}
+
+.paypal {
+  position: absolute;
+  display:none;
+  left: 1.55vw;
+  bottom: 8vh;
+  width: 50%;
+  height: auto;
+}
+
 
 
 
 @media screen and (max-width: 1110px) {
+  .thirtynine {
+    display: none;
+  }
   .desc,.splash,.imagegallery,.contain {
     width: 475px;
   }
@@ -558,6 +601,9 @@ a {
                   html, body {
                     font-size: 16 !important;
                   }
+                  .paypal {
+                    left: 2vw;
+                  }
 
                   .gallery {
                     bottom: 5.5% !important;
@@ -585,14 +631,14 @@ a {
                   margin-bottom: 60%;
                 }
 
-  
+
                   .splash {
                     display: none;
                   }
 
                   .desc {
                     text-align: center;
-                    
+
                     left: 50%;
                     margin-bottom: 60%;
                     transform:translate(-50%,0%);
@@ -660,6 +706,7 @@ a {
                   }
 
                   .shipping {
+                    bottom: 0 !important;
                     font-size: 10;
                   }
 
@@ -696,7 +743,7 @@ a {
 }
 
     @media screen and (max-width: 568px){
-                  
+
                   body {
                     font-size: 14;
                   }
@@ -704,13 +751,13 @@ a {
     }
 
     @media screen and (max-width: 508px){
-                  
+
                   .smallcontain {
                     margin-top: 40% !important;
                   }
 
-                 
-  
+
+
 
     }
 
@@ -734,23 +781,22 @@ a {
                   .bigimage,.test {
                     margin-bottom: 50px;
                   }
-                  
+
                   .smallcontain {
                     margin-top: 45% !important;
                   }
 
 
     @media screen and (max-width: 350px){
-                  
+
                   .smallcontain {
                     margin-top: 70% !important;
                   }
 
-                 
-  
+
+
 
     }
 
 
 }
-

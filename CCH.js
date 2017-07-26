@@ -13,7 +13,7 @@ $(document).ready(function(){
       var images;
 
       for (var i = 0; i < results.length; i++) {
-        
+
         description = results[i].getStructuredText("cch_content.description").asHtml();
         images = results[i].getGroup("cch_content.images1").asHtml();
 
@@ -23,12 +23,12 @@ $(document).ready(function(){
         info.append(description);
         gallery.append(images);
 
-        
-      
+
+
         $(gallery).appendTo(body).insertBefore(".contain");
 
         if($(window).width() < 767) {
-          
+
           $(info).appendTo(body).insertBefore(gallery);
 
         } else {
@@ -39,24 +39,24 @@ $(document).ready(function(){
 
         $(".imagegallery > section > img").addClass("bigimage");
 
-      
+
 
       }
 
-      // add class to all images in the gallery 
-      
+      // add class to all images in the gallery
+
 
 
     });
   }, "MC5XV1pSRUNZQUFDa0EzSkow.X--_vRwYOu-_vU3vv70_Ne-_vSvvv70TSO-_vTnvv73vv73vv73vv71DW--_ve-_ve-_vTIzU--_ve-_vUg");
 
-    
+
     $("#c,#b,#s").hide();
     $("#c").first().show();
     $("#b").first().show();
     $("#s").first().show();
     var clicked = 0;
-    
+
     $("#c,#b,#s").click(function () {
       clicked++;
       console.log(clicked);
@@ -76,25 +76,25 @@ $(document).ready(function(){
         $(this).hide();
         $(this).first().show();
       }
-        
+
     });
 
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
-    $(".down").click(function(){
+    $(".down,.downarrow").click(function(){
       var one = $(".desc").offset();
       var two = $(window).height()*.035;
-      $(".arrow").fadeOut();
+      $(".arrow,.downarrow").fadeOut();
         $("body,html").animate({scrollTop: one.top-two},700);
     });
 
 } else {
 
-    $(".down").click(function(){
+    $(".down,.downarrow").click(function(){
       var one = $(".desc").offset();
       var two = $(".contain").height()*.375;
-      $(".arrow").fadeOut();
+      $(".arrow,.downarrow").fadeOut();
         $("body,html").animate({scrollTop: one.top-two},700);
     });
 
@@ -149,37 +149,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
     $(".buyone",this).click(function(){
 
-        $(".thispricec").html(function(i, val) { 
-          return val*1+price
-        });
-        
-        var copperP = parseInt($('.thispricec').text());
-        var brassP = parseInt($('.thispriceb').text());
-        var stainlessP = parseInt($('.thisprices').text());
-        var totalP = copperP+brassP+stainlessP;
-
-        $(".totalnumber > p").html(function() { 
-          return totalP 
-        });
-        
-        $(".empty").hide();
-
-        $(".qtyc").html(function(i, val) { 
-          return val*1+1
-        });
-
-        $(".shipping,.cartcontent,.cartitemcopper,.checkout").show();
-
-        $(".cartcount").html(function(i, val) { 
-          return val*1+1 
-         });
-   
-    });
-
-    
-    $(".buytwo").click(function(){
-        
-        $(".thispriceb").html(function(i, val) { 
+        $(".thispricec").html(function(i, val) {
           return val*1+price
         });
 
@@ -188,50 +158,80 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         var stainlessP = parseInt($('.thisprices').text());
         var totalP = copperP+brassP+stainlessP;
 
-        $(".totalnumber > p").html(function() { 
-          return totalP
-        });
-
-        $(".empty").hide();
-    
-        $(".qtyb").html(function(i, val) { 
-          return val*1+1
-        });
-
-        $(".shipping,.cartcontent,.cartitembrass,.checkout").show();
-
-        $(".cartcount").html(function(i, val) { 
-          return val*1+1 
-        });
-
-    });
-
-    
-    $(".buythree").click(function(){
-        
-        $(".thisprices").html(function(i, val) { 
-          return val*1+price
-        });
-
-        var copperP = parseInt($('.thispricec').text());
-        var brassP = parseInt($('.thispriceb').text());
-        var stainlessP = parseInt($('.thisprices').text());
-        var totalP = copperP+brassP+stainlessP;
-
-        $(".totalnumber > p").html(function() { 
+        $(".totalnumber > p").html(function() {
           return totalP
         });
 
         $(".empty").hide();
 
-        $(".qtys").html(function(i, val) { 
+        $(".qtyc").html(function(i, val) {
           return val*1+1
         });
 
-        $(".shipping,.cartcontent,.cartitemstainless,.checkout").show();
+        $(".shipping,.cartcontent,.cartitemcopper,.checkout,.paypal").show();
 
         $(".cartcount").html(function(i, val) {
-          return val*1+1 
+          return val*1+1
+         });
+
+    });
+
+
+    $(".buytwo").click(function(){
+
+        $(".thispriceb").html(function(i, val) {
+          return val*1+price
+        });
+
+        var copperP = parseInt($('.thispricec').text());
+        var brassP = parseInt($('.thispriceb').text());
+        var stainlessP = parseInt($('.thisprices').text());
+        var totalP = copperP+brassP+stainlessP;
+
+        $(".totalnumber > p").html(function() {
+          return totalP
+        });
+
+        $(".empty").hide();
+
+        $(".qtyb").html(function(i, val) {
+          return val*1+1
+        });
+
+        $(".shipping,.cartcontent,.cartitembrass,.checkout,.paypal").show();
+
+        $(".cartcount").html(function(i, val) {
+          return val*1+1
+        });
+
+    });
+
+
+    $(".buythree").click(function(){
+
+        $(".thisprices").html(function(i, val) {
+          return val*1+price
+        });
+
+        var copperP = parseInt($('.thispricec').text());
+        var brassP = parseInt($('.thispriceb').text());
+        var stainlessP = parseInt($('.thisprices').text());
+        var totalP = copperP+brassP+stainlessP;
+
+        $(".totalnumber > p").html(function() {
+          return totalP
+        });
+
+        $(".empty").hide();
+
+        $(".qtys").html(function(i, val) {
+          return val*1+1
+        });
+
+        $(".shipping,.cartcontent,.cartitemstainless,.checkout,.paypal").show();
+
+        $(".cartcount").html(function(i, val) {
+          return val*1+1
           });
 
     });
@@ -249,12 +249,12 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                   return totalP;
                   });
 
-        
+
     });
 
     $(".cartpage").click(function(){
       if ($(".cartitembrass").css('display')=== 'none' && $(".cartitemstainless").css('display')=== 'none' && $(".cartitemcopper").css('display')=== 'none') {
-          $(".cartcontent,.shipping,.checkout").hide();
+          $(".cartcontent,.shipping,.checkout,.paypal").hide();
           $(".empty").show();
           $(".cartcount").text("0");
           console.log("wtf");
@@ -268,7 +268,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
     //copper//
 
     $('.qtyplusc').click(function(){
-              
+
               $(".qtyc").html(function(i, val) {
                   return val*1+1
                   });
@@ -278,7 +278,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
               console.log(one);
               console.log(two);
               console.log(total);
-              
+
               $(".pricec > p").html(function(i, val) {
                   return total
                   });
@@ -286,18 +286,18 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
     });
 
     $(".qtyminusc").click(function(e) {
-      
+
       $(".qtyc").html(function(i, val) {
           return val*1-1
       });
-      
+
       var one = parseInt($('.qtyc').text());
       var two = price;
       var total = one*two;
       console.log(one);
       console.log(two);
       console.log(total);
-      
+
       $(".pricec > p").html(function(i, val) {
           return total
           });
@@ -307,13 +307,13 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
       } else {
         $(".cartitemcopper").show();
       }
-      
+
       });
 
     //brass//
 
       $('.qtyplusb').click(function(){
-      
+
       $(".qtyb").html(function(i, val) {
           return val*1+1
           });
@@ -321,35 +321,35 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
       $(".totalnumber > p").html(function(i, val) {
           return total;
           });
-      
-      
+
+
       var one = parseInt($('.qtyb').text());
       var two = price;
       var total = one*two;
       console.log(one);
       console.log(two);
       console.log(total);
-      
+
       $(".priceb > p").html(function(i, val) {
           return total
           });
 
-        
+
     });
 
     $(".qtyminusb").click(function(e) {
-      
+
       $(".qtyb").html(function(i, val) {
           return val*1-1
       });
-      
+
       var one = parseInt($('.qtyb').text());
       var two = price;
       var total = one*two;
       console.log(one);
       console.log(two);
       console.log(total);
-      
+
       $(".priceb > p").html(function(i, val) {
           return total
           });
@@ -359,13 +359,13 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
       } else {
         $(".cartitembrass").show();
       }
-      
+
       });
 
     //stainless//
 
     $('.qtypluss').click(function(){
-      
+
       $(".qtys").html(function(i, val) {
           return val*1+1
           });
@@ -373,35 +373,35 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
       $(".totalnumber > p").html(function(i, val) {
           return total;
           });
-      
-      
+
+
       var one = parseInt($('.qtys').text());
       var two = price;
       var total = one*two;
       console.log(one);
       console.log(two);
       console.log(total);
-      
+
       $(".prices > p").html(function(i, val) {
           return total
           });
 
-        
+
     });
 
     $(".qtyminuss").click(function(e) {
-      
+
       $(".qtys").html(function(i, val) {
           return val*1-1
       });
-      
+
       var one = parseInt($('.qtys').text());
       var two = price;
       var total = one*two;
       console.log(one);
       console.log(two);
       console.log(total);
-      
+
       $(".prices > p").html(function(i, val) {
           return total
           });
@@ -411,7 +411,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
       } else {
         $(".cartitemstainless").show();
       }
-      
+
       });
 
 
@@ -419,13 +419,13 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
     $(".qtyplusc,.qtyplusb,.qtypluss").click(function(){
       $(".cartcount").html(function(i, val) {
-          return val*1+1 
+          return val*1+1
         });
     });
 
     $(".qtyminusc,.qtyminusb,.qtyminuss").click(function(){
       $(".cartcount").html(function(i, val) {
-          return val*1-1 
+          return val*1-1
         });
     });
 
@@ -437,18 +437,18 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
     });
 
     //remove copper items from cart//
-    
+
     $('.cartpage').on('click','.removeone',function(){
       var copperQ = parseInt($('.qtyc').text());
       var copperP= parseInt($('.thispricec').text());
         $('.cartitemcopper').hide();
         //minus 1 from cart count//
         $(".cartcount").html(function(i, val) {
-          return val*1-copperQ 
+          return val*1-copperQ
         });
         //subtract 40 from total//
         $(".totalnumber > p").html(function(i, val) {
-          return val*1-copperP 
+          return val*1-copperP
         });
 
         $(".qtyc").text("0");
@@ -464,11 +464,11 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         $('.cartitembrass').hide();
         //minus 1 from cart count//
         $(".cartcount").html(function(i, val) {
-          return val*1-brassQ 
+          return val*1-brassQ
         });
         //subtract 40 from total//
         $(".totalnumber > p").html(function(i, val) {
-          return val*1-brassP 
+          return val*1-brassP
         });
 
         $(".qtyb").text("0");
@@ -485,11 +485,11 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         $('.cartitemstainless').hide();
         //minus 1 from cart count//
         $(".cartcount").html(function(i, val) {
-          return val*1-stainlessQ 
+          return val*1-stainlessQ
         });
         //subtract 40 from total//
         $(".totalnumber > p").html(function(i, val) {
-          return val*1-stainlessP 
+          return val*1-stainlessP
         });
 
         $(".qtys").text("0");
@@ -500,13 +500,13 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
     // refresh on smaller size, just in case //
     // $(window).resize(function(){
-    //       if ($(window).width() <= 767) {   
-    //               location.reload(); 
+    //       if ($(window).width() <= 767) {
+    //               location.reload();
     //     } else {
 
     //     }
     // });
-  
+
 
     var cartItems = [];
     var shopifyLink = "http://nihil-artikel.myshopify.com/cart/";
@@ -534,12 +534,12 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         if (brassQ===0) {
           console.log("no brass!");
           finalLink = finalLink.replace(',35068360067:0','').replace('35068360067:0,','');
-        } 
+        }
 
         if (stainlessQ===0) {
           console.log("no stainless!");
           finalLink = finalLink.replace(',35068492547:0','');
-         } 
+         }
          //else if (stainlessQ >= 1) {
         //   console.log("wtf");
         //   finalLink = finalLink.replace(',','');
