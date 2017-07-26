@@ -527,7 +527,7 @@ a {
 
 
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1000px) {
   .thirtynine {
     display: none;
   }
@@ -706,7 +706,7 @@ a {
                   }
 
                   .shipping {
-                    bottom: 0 !important;
+                    bottom: 1% !important;
                     font-size: 10;
                   }
 
