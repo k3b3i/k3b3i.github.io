@@ -34,7 +34,6 @@ html {
   color: #bfbfbf;
   overflow: scroll;
   line-height: 1.2;
-  -webkit-font-smoothing: subpixel-antialiased;
  }
 
  body {
@@ -263,7 +262,7 @@ html {
   left: 50%;
   height: auto;
   width: 100% !important;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   height: auto;
   transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
