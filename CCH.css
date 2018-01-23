@@ -64,8 +64,8 @@ html {
   display: inline;
   position: fixed;
   cursor: pointer;
-  top: 2.5%;
-  right: 1.5%;
+  top: 17;
+  right: 20;
   font-size: 23;
   z-index: 999;
  }
@@ -82,8 +82,8 @@ html {
  .down {
   cursor: pointer;
   position: fixed;
-  left: 1.75%;
-  top: 2.5%;
+  left: 20;
+  top: 17;
   font-size: 23;
   transform:translate(0%,0%);
   -webkit-transform:translate(0%,0%);
@@ -92,16 +92,16 @@ html {
  .purchase{
   cursor: pointer;
   position: fixed;
-  left: 1.75%;
-  bottom: 2.5%;
+  left: 20;
+  bottom: 17;
   font-size: 23;
  }
 
   .gallery{
   cursor: pointer;
   position: fixed;
-  left: 1.75%;
-  bottom: 6.5%;
+  left: 20;
+  bottom: 47;
   font-size: 23;
  }
 
